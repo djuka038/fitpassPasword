@@ -1,10 +1,17 @@
 <?php
 
-namespace FitpassPassword;
+namespace FitPassPassword;
 
 class Lib
 {
 
+    /**
+     * Generate random password
+     *
+     * @param integer $length
+     * @param integer $strength
+     * @return mixed
+     */
     public static function generatePassword(int $length, int $strength): mixed
     {
         if ($length < 6) {
@@ -14,7 +21,7 @@ class Lib
         $capitalLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         $smallLetters = "abcdefghijklmnopqrstuvwxyz";
         $numbers = "0123456789";
-        $symbols = " !#$%&(){}[]=";
+        $symbols = "!#$%&(){}[]=";
         $randomString = "";
 
         if ($strength === 1) {
@@ -72,9 +79,9 @@ class Lib
                 preg_match_all("/[A-Z]/", $randomString) < 2
                 || preg_match_all("/[a-z]/", $randomString) < 1
                 || preg_match_all("/[3-4]/", $randomString) < 1
-                || strlen(strpbrk($randomString, $symbols)) < 1
                 || str_contains($randomString, "2") !== true
                 || str_contains($randomString, "5") !== true
+                || strlen(strpbrk($randomString, $symbols)) < 1
             );
         }
 

@@ -2,7 +2,7 @@
     "name": "stefan/fitpass-password",
     "autoload": {
         "psr-4": {
-            "FitpassPassword\\": "src/"
+            "FitPassPassword\\": "src/"
         }
     },
     "authors": [
