@@ -1,0 +1,17 @@
+{
+    "name": "stefan/fitpass-password",
+    "autoload": {
+        "psr-4": {
+            "FitpassPassword\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stefan",
+            "email": "djukelicstefan@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
